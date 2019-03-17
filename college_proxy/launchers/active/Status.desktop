@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Lab Proxy Profile Active
+Comment=Toggle Proxy Configuration: Lab / Wifi
+Exec=/home/wdd/scripts/proxy/startproxy.sh
+Icon=network-wired-disconnected
+Path=/home/wdd/scripts/proxy
+Terminal=true
+StartupNotify=false
+Name[en_IE]=PROXY STATUS: Lab PC

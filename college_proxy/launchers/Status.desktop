@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Wifi Proxy Profile Active
+Comment=
+Exec=/home/wdd/scripts/proxy/stopproxy.sh
+Icon=notification-network-wireless-full
+Path=/home/wdd/scripts/proxy
+Terminal=true
+StartupNotify=false
+Name[en_IE]=PROXY STATUS: WiFi or Home

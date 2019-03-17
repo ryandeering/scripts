@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Lab Proxy Profile
+Comment=
+Exec=/home/wdd/scripts/proxy/startproxy.sh
+Icon=software-update-available
+Path=/home/wdd/scripts/proxy
+Terminal=true
+StartupNotify=false
+Name[en_IE]=Configure Proxy: Lab PC
