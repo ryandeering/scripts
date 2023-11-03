@@ -1,0 +1,23 @@
+#!/bin/bash
+
+packages_and_versions=(
+  "Microsoft.EntityFrameworkCore:7.0.13"
+)
+
+find . -name "*.csproj" | while read csproj; do
+  echo "Checking $csproj..."
+  
+  for pv in "${packages_and_versions[@]}"; do
+    IFS=":" read -r package version <<< "$pv"
+    
+    if grep -q "<PackageReference Include=\"$package\"" "$csproj"; then
+      sed -i '' "s|<PackageReference Include=\"$package\" Version=\"[^\"]*\"|<PackageReference Include=\"$package\" Version=\"$version\"|g" "$csproj"
+      echo "Updated $package to $version in $csproj"
+    else
+      echo "$package not found in $csproj"
+    fi
+  done
+done
+
+dotnet restore
+dotnet build
